@@ -1,0 +1,10 @@
+.inputWindow {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#title, #author, #pages {
+    width: 300px;
+    margin: 2px;
+}

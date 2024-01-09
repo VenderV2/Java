@@ -11,6 +11,27 @@ show.addEventListener('click', () => {
     showBooks();
 })
 
+const addBook = document.querySelector('.new-book');
+addBook.addEventListener('click', () => {
+    const bookEntry = document.createElement('div');
+    bookEntry.classList.add('inputWindow');
+    body.appendChild(bookEntry);
+
+    const title = document.createElement('input')
+    title.type = 'text'
+    title.setAttribute('id', 'title')
+    const author = document.createElement('input')
+    author.type = 'text'
+    author.setAttribute('id', 'author')
+    const pages = document.createElement('input')
+    pages.type = 'text'
+    pages.setAttribute('id', 'pages')
+
+    bookEntry.appendChild(title)
+    bookEntry.appendChild(author)
+    bookEntry.appendChild(pages)
+})
+
 
 function Book(title, author, pages, read) {
     this.title = title;
