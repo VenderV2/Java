@@ -1,16 +1,6 @@
 const myLibrary = [];
 const body = document.querySelector('body');
 
-const submit = document.querySelector('.submit')
-submit.addEventListener('click', () => {
-    addBookToLibrary();
-})
-
-const show = document.querySelector('.show')
-show.addEventListener('click', () => {
-    showBooks();
-})
-
 const addBook = document.querySelector('.new-book');
 addBook.addEventListener('click', () => {
     const bookEntry = document.createElement('div');
@@ -30,6 +20,28 @@ addBook.addEventListener('click', () => {
     bookEntry.appendChild(title)
     bookEntry.appendChild(author)
     bookEntry.appendChild(pages)
+    const btns = document.createElement('div')
+    btns.classList.add('btns')
+    bookEntry.appendChild(btns)
+
+    const submit = document.createElement('button')
+    const show = document.createElement('button')
+    submit.classList.add('submit')
+    show.classList.add('show')
+    btns.appendChild(submit)
+    btns.appendChild(show)
+    submit.textContent = 'Submit'
+    show.textContent = 'Show'
+
+    submit.addEventListener('click', () => {
+        addBookToLibrary();
+    })
+
+    show.addEventListener('click', () => {
+        showBooks();
+    })
+
+
 })
 
 

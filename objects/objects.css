@@ -1,10 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+}
+
 .inputWindow {
     display: flex;
     flex-direction: column;
+    text-wrap: none;
+    position: absolute;
+    top: 30px;
+    left: 370px;
+    padding: 20px;
+    background-color: antiquewhite;
 
 }
 
 #title, #author, #pages {
     width: 300px;
     margin: 2px;
+}
+
+.submit,.show {
+    height: 20px;
+    margin: 2px;
+}
+
+.new-book {
+
+}
+
+.newbtn {
+    display: flex;
+    position: relative;
+    top: 80px;
+    width: 500px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
 }
