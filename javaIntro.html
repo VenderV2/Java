@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function add7(numberInput) {
+            return numberInput + 7;
+        }
+
+        function capitalise(stringInput) {
+            let lowerCase = stringInput.toLowerCase();
+            let firstChar = stringInput.charAt(0);
+            let firstCharUpper = firstChar.toUpperCase();
+
+            return lowerCase.replace(firstChar, firstCharUpper);
+        }
+
+        function lastLetter(stringInput) {
+            return stringInput.charAt(stringInput.length-1);
+        }
+
+
+
+        console.log(capitalise("heLLo"));
+        console.log(lastLetter("heLLo"));
+
+    </script>
+</body>
+
+</html>
